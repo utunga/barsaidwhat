@@ -78,10 +78,12 @@
  	
  
  	<div class="filterbox pal mam">
-		<div id="bars"></div>
+		<div id="bars"><h3>Bars</h3><p>TBD</p></div>
 	</div>
 	
 	<div class="filterbox pal mam">
+		<h3>Rollover Map</h3>
+		<p>Would go here</p>
 		<iframe name="map_frame">
 			map goes here
 		</iframe>
@@ -96,8 +98,8 @@
 <footer>
 <div class="foot pvm">
  <div class="page">
- <p class="mam mtl"><i>Bar Tweets was created just as a wee joke by <a href="http://google.com/profiles/utunga#about">@utunga</a>. Hosting graciously provided by Cloudant, and Nodejitsu. Yay them.. <a href="http://github.com/utunga/barsaidwhat">100% open source</a>, 100% open data where possible. No animals were harmed.</i></p>
- <p class="mam"><i>Kia Kaha. Arohanui</i> </p>
+ <p class="mam mtl"><i>Bar Tweets was created just as a wee joke by <a href="http://about.me/milesgray">@utunga</a> based on an idea from <a href="http://twitter.com/Clintonvm">@clintonvm</a>. Hosting graciously provided by Cloudant, and Nodejitsu. Yay them.. <a href="http://github.com/utunga/barsaidwhat">100% open source</a>, open data where possible. No animals were harmed.</i></p>
+ <p class="mam"><i>You will now follow <a href="http://twitter.com/barsaidwhat">@barsaidwhat</a> on twitter. Arohanui</i> </p>
  </div>
 </div>
 </footer>
@@ -150,7 +152,7 @@ var _gaq = [['_setAccount', 'UA-21698263-1'], ['_trackPageview']];
 				<a href="http://twitter.com/intent/favorite?tweet_id={{tweet_id}}">Favorite</a>
 			</div>
 			<div class="geo_info">
-				<a href="https://maps.google.com/maps?q={{geo_lat}}%2C{{geo_lon}}&z=19">near to {{{bar_names}} <span style="font-size:0.9em">{{geo_lat}}, {{geo_lon}}</span></a> 
+				<a href="https://maps.google.com/maps?q={{geo_lat}}%2C{{geo_lon}}&z=19">near to {{{bar_names}} <span style="font-size:0.9em">{{geo_lat}}, {{geo_lon}}</span></a> | <a href="https://cloudant.com/futon/document.html?occutweet%2Fpub/{{doc_id}}">source data</a>
 			</div>
 			<hr />
           {{/items}}
