@@ -8,13 +8,13 @@ barsaidwhat
 
 * couchdb, couchapp to display tweets near bars
 
-** eh? **
+**eh?**
 
 quick and simple app to monitor twitter for tweets tagged in a given bounding box, then further refine the stream to ones near bars and then display them
 
 see <a href="http://barsaidwhat.com">barsaidwhat.com</a> for an example (if its still up)
 
-** to use **
+**to use**
 
 *  install couchdb, node, couchapp
 *  edit node_monitor/config.js to add your api keys for yelp, twitter, couchdb config
@@ -26,6 +26,6 @@ see <a href="http://barsaidwhat.com">barsaidwhat.com</a> for an example (if its 
 * cd ./app; coucahpp push (to create the couchapp)
 
 
-** to deploy **
+**to deploy**
 
 currently, the node.js bits are hosted by <a href="http://nodejitsu.com">nodejitsu</a>, and the couchapp bits hosted by <a href="http://cloudant.com">cloudant.com</a> both on free trial/beta versions though so no idea how long this will last.
