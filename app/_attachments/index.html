@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>The Bar Said What?</title>
+	<meta name="description" content="Tweets from Bars">
+	<meta name="author" content="Miles Gray @utunga">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="css/library.css?v=3">
+	<link rel="stylesheet" href="css/style.css?v=3">
+	<link rel="stylesheet" href="css/main.css?v=3">
+	<script src="js/libs/modernizr-1.6.min.js"></script>
+</head>
+<body>
+<!-- START BODY -->
+
+<div id="container">
+
+<header>
+<div class="header">
+<div class="container">
+<div class="page">
+<div class="line">
+<div class="3of5 unit">
+<div class="clear"><!-- clear floats --></div>
+<h1>Bar said what?</h1>
+
+<div class="typebox mbm mts">
+    <div id="types">
+      <ul>
+        <li class="button mrm"><a href="#/loc/wlg">Wellington</a></li>
+        <li class="button mrm"><a href="#/loc/nyc">New York</a></li>
+        </ul>
+ 	</div>
+</div> 
+
+    
+</div>
+<div class="2of5 unit pll">
+</div>
+</div>
+</div>
+
+
+
+
+</div><!-- /.container -->
+</div><!-- /.head -->
+</header>
+
+<div id="main">
+<div class="body mainbody">
+<div class="page">
+<div class="line">
+
+<!-- MAIN BODY CONTENT -->
+<div class="unit size3of5">
+ 
+<div class="container pam">
+    <div id="curr_title" >Geo located tweets near bars in NYC or Wellington</div>
+</div>
+
+<div id="main_content">
+	.. loading ..
+</div>
+
+</div>
+
+<!-- RIGHT COL -->
+<div class="unit size2of5 pll" >
+ 	
+ 
+ 	<div class="filterbox pal mam">
+		<div id="bars"></div>
+	</div>
+	
+	<div class="filterbox pal mam">
+		<iframe name="map_frame">
+			map goes here
+		</iframe>
+	</div>
+    
+</div>
+</div>
+
+</div><!--/.page-->
+</div><!--/.body-->
+</div><!--/#main-->
+<footer>
+<div class="foot pvm">
+ <div class="page">
+ <p class="mam mtl"><i>Bar Tweets was created just as a wee joke by <a href="http://google.com/profiles/utunga#about">@utunga</a>. Hosting graciously provided by Cloudant, and Nodejitsu. Yay them.. <a href="http://github.com/utunga/barsaidwhat">100% open source</a>, 100% open data where possible. No animals were harmed.</i></p>
+ <p class="mam"><i>Kia Kaha. Arohanui</i> </p>
+ </div>
+</div>
+</footer>
+</div>
+<script type="text/javascript">
+var _gaq = [['_setAccount', 'UA-21698263-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+</script>
+</body>
+
+<script src="js/libs/js_methods_arrays_tofixfuckingIE.js"></script>
+
+  <script src="/_utils/script/sha1.js"></script>
+  <script src="/_utils/script/json2.js"></script>
+  <script src="/_utils/script/jquery.js"></script>
+  <script src="/_utils/script/jquery.couch.js"></script>
+  <script src="vendor/couchapp/jquery.couchLogin.js"></script>
+  <script src="vendor/couchapp/jquery.couchProfile.js"></script>
+  <script src="vendor/couchapp/md5.js"></script>
+  <script src="vendor/couchapp/jquery.mustache.js"></script>
+  <script src="/_utils/script/sha1.js"></script>
+  
+  <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <script id="recent-messages" type="text/x-mustache" charset="utf-8">
+		<div class="twitter-timeline" id="items">
+
+          {{#items}}
+			<div>
+				<p>
+					<a href="https://twitter.com/{{screen_name}}/status/{{tweet_id}}"><img 
+						class="profile_icon" src="{{{user_profile_image_url}}}" width="48" height="48" alt="Twitter"></a>
+					{{{linkified_text}}} 
+				</p>
+			</div>
+			<div id="web_intent">
+				<span class="created_at">@{{{screen_name}}} ~ <a href="https://twitter.com/{{screen_name}}/status/{{tweet_id}}" class="created_at_time">{{created_at}}</a></span>
+				<img src="img/retweet_mini.png" width="16" height="16" alt="Retweet">
+				<a href="http://twitter.com/intent/retweet?tweet_id={{tweet_id}}">Retweet</a>
+
+				<img src="img/reply_mini.png" width="16" height="16" alt="Reply">
+				<a href="http://twitter.com/intent/tweet?in_reply_to={{tweet_id}}">Reply</a>
+
+				<img src="img/favorite_mini.png" width="16" height="16" alt="Favorite">
+				<a href="http://twitter.com/intent/favorite?tweet_id={{tweet_id}}">Favorite</a>
+			</div>
+			<div class="geo_info">
+				<a href="https://maps.google.com/maps?q={{geo_lat}}%2C{{geo_lon}}&z=19">near to {{{bar_names}} <span style="font-size:0.9em">{{geo_lat}}, {{geo_lon}}</span></a> 
+			</div>
+			<hr />
+          {{/items}}
+		</div>
+
+  </script>
+  <script src="js/app.js"></script>
+  
+</html>

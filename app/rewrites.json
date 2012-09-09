@@ -1,0 +1,46 @@
+[
+{
+  "from": "pub/",
+  "to": "../.."
+},
+{
+  "from": "pub/_changes/*",
+  "to": "../../_changes/*"
+},
+{
+  "from": "",
+  "to": "index.html"
+},
+{
+  "from": "img/*",
+  "to": "img/*"
+},
+{
+  "from": "js/*",
+  "to": "js/*"
+},
+{
+  "from": "js/libs/*",
+  "to": "js/libs/*"
+},
+{
+  "from": "css/*",
+  "to": "css/*"
+},
+{
+  "from": "vendor/*",
+  "to": "vendor/*"
+},
+{
+  "from": "_view/*",
+  "to": "_view/*"
+},
+{
+  "from": "_design/app/_view/*",
+  "to": "_view/*"
+},
+{
+  "from": "pub/_design/app/_view/*",
+  "to": "_view/*"
+}
+]
