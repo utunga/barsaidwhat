@@ -23,8 +23,10 @@ String.prototype.linkify = function() {
 };
 
 map = function(doc) {
-    if ((doc.doc_type=="tweet") &&
-    	((doc.geo)||(doc.coordinates)))
+    if (doc.doc_type=="tweet"
+    	&& ( doc.rough_geo == "wlg"
+    	     || (doc.geo)
+    	     ||(doc.coordinates)))
     {
         var timestamp = parseTwitterDate(doc.created_at);
         var bar_names_arr = [];
@@ -40,6 +42,9 @@ map = function(doc) {
         else {
         	bar_names = null;
         }
+        var near_to_msg = (bar_names) ? "near to " + bar_names :
+        								(doc.rough_geo=="wlg") ? "in wellington " : "at";
+        
         var geo_lat = doc.geo.coordinates[0];
         var geo_lon = doc.geo.coordinates[1];
         // all messages sorted by timestamp
@@ -58,7 +63,7 @@ map = function(doc) {
             geo_lat: geo_lat,
             geo_lon: geo_lon,
             doc_id: doc._id,
-            bar_names: bar_names
+            near_to_msg: near_to_msg
         });
     }
 }

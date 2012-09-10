@@ -25,7 +25,8 @@ $(function() {
     function drawItems() {
         db.view(design + "/recent-items", {
             descending : "true",
-            limit : 50,
+            reduce: false,
+            limit : 30,
             update_seq : true,
             success : function(data) {
                 setupChanges(data.update_seq);
